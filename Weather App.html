@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+        <h1 class="header-name">Weather App</h1>
+        <form id="search-form">
+          <input
+            type="text"
+            name="search-input"
+            id="search-input"
+            placeholder="Search for a city"
+            autocomplete="off"
+          />
+          <button type="submit" class="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+      <section class="side-cont">
+        <div id="main">
+          <div id="weather-info">
+            <p class="weather-city">City</p>
+            <div class="weather-temp">
+              <p class="temp">0<sup>&deg</sup></p>
+            </div>
+            <div class="weather-des">
+              <p class="des">Des</p>
+            </div>
+            <div class="weather-range">
+              <p class="range">
+                <span id="max-temp">H: <sup>&deg</sup></span
+                ><span id="min-temp">L: <sup>&deg</sup></span>
+              </p>
+            </div>
+          </div>
+          <div class="hourly-list"></div>
+        </div>
+
+        <section class="conditions">
+          <div class="weather-forecast">
+            <div class="forecast-list">
+              <div class="weather-conditions">
+                <div class="air-quality">
+                  <p class="icons">
+                    <span class="material-symbols-outlined"> ac_unit </span>
+                    <span class="icon-text">Air Quality</span>
+                  </p>
+                  <p class="quality data"></p>
+                </div>
+                <div class="uv-index">
+                  <p class="icons">
+                    <i class="fa-solid fa-radiation"></i>
+                    <span class="icon-text">UV Index</span>
+                  </p>
+                  <p class="uv-quality data"></p>
+                </div>
+                <div class="wind-speed">
+                  <p class="icons">
+                    <span class="material-symbols-outlined"> air </span>
+                    <span class="icon-text">Wind Speed</span>
+                  </p>
+                  <div class="inline">
+                    <span class="speed data"></span>
+                    <span class="unit">km/h</span>
+                  </div>
+                </div>
+                <div class="humidity-value">
+                  <p class="icons">
+                    <span class="material-symbols-outlined">
+                      humidity_mid
+                    </span>
+                    <span class="icon-text">Humidity</span>
+                  </p>
+                  <span class="humidity data"></span>
+                  <span class="unit">%</span>
+                </div>
+
+                <div class="sunrise-sunset">
+                  <p class="icons">
+                    <span class="material-symbols-outlined"> wb_twilight </span>
+                    <span class="icon-text">Sun</span>
+                  </p>
+                  <div class="sun">
+                    <span class="sunrise"></span><span class="sunset"></span>
+                  </div>
+                </div>
+                <div class="feels-like">
+                  <p class="icons">
+                    <span class="material-symbols-outlined"> thermometer </span>
+                    <span class="icon-text">Feels Like</span>
+                  </p>
+                  <span class="feels-like-value data"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
